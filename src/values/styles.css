@@ -1,0 +1,19 @@
+.profile-layout {
+	-fx-background-color: #1E4147;
+	-fx-background-radius: 25 25 25 25;
+}
+
+.yellowish-background{
+	-fx-background-color: #FAE3B4;
+}
+
+.green-background {
+	-fx-background-color: #5A5A5A;
+}
+
+.textfield {
+	-fx-text-fill: #1E4147;
+}
+.light-gray-background {
+	-fx-background-color: #D3D3D3;
+}

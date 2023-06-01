@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="665.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="main.Controller">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="yellowish-background" stylesheets="@../values/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" styleClass="profile-layout" stylesheets="@../values/styles.css">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../scott1notext.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </VBox>
+            <Label text="Simple Entrance Alerts" textFill="#1e4147">
+               <font>
+                  <Font name="Consolas Bold" size="42.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" top="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="green-background" stylesheets="@../values/styles.css">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="362.0" text="Enter your Twitch username here:" textFill="#fae3b4">
+                     <font>
+                        <Font name="Consolas Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="streamerField" prefHeight="25.0" prefWidth="225.0" promptText="Streamer" styleClass="textfield" stylesheets="@../values/styles.css">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="390.0" prefWidth="200.0">
+               <content>
+                  <VBox fx:id="viewersLayout" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="650.0" styleClass="green-background" stylesheets="@../values/styles.css">
+               <children>
+                  <Button fx:id="saveDataButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveData" prefWidth="250.0" text="Save HTML File">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addViewerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addViewer" prefWidth="150.0" text="Add New Viewer">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
